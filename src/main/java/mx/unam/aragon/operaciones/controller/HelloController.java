@@ -43,6 +43,9 @@ public class HelloController {
     @FXML
     private TextField txtNumeroUno;
 
+    @FXML
+    private Label label1;
+
     private int estado =0;
 
     @FXML
@@ -54,9 +57,15 @@ public class HelloController {
         Racional rr0=new Racional(r1,r2);
         Racional rr1=new Racional(r3,r4);
         Racionales op=new Racionales();
-        Racional r=(Racional)op.suma(rr0,rr1);
-        this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
-        this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        if(op.validador(rr0,rr1)==false){
+            label1.setText("La división entre cero no está definida");
+        }else{
+            label1.setText("");
+            Racional r=(Racional)op.suma(rr0,rr1);
+            this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
+            this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        }
+
         this.label.setText("+");
     }
     @FXML
@@ -68,9 +77,15 @@ public class HelloController {
         Racional rr0=new Racional(r1,r2);
         Racional rr1=new Racional(r3,r4);
         Racionales op=new Racionales();
-        Racional r=(Racional)op.resta(rr0,rr1);
-        this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
-        this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        if(op.validador(rr0,rr1)==false){
+            label1.setText("La división entre cero no está definida");
+        }else{
+            label1.setText("");
+            Racional r=(Racional)op.resta(rr0,rr1);
+            this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
+            this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        }
+
         this.label.setText("-");
     }
 
@@ -83,9 +98,15 @@ public class HelloController {
         Racional rr0=new Racional(r1,r2);
         Racional rr1=new Racional(r3,r4);
         Racionales op=new Racionales();
-        Racional r=(Racional)op.producto(rr0,rr1);
-        this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
-        this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        if(op.validador(rr0,rr1)==false){
+            label1.setText("La división entre cero no está definida");
+        }else{
+            label1.setText("");
+            Racional r=(Racional)op.producto(rr0,rr1);
+            this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
+            this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        }
+
         this.label.setText("*");
     }
     @FXML
@@ -97,9 +118,15 @@ public class HelloController {
         Racional rr0=new Racional(r1,r2);
         Racional rr1=new Racional(r3,r4);
         Racionales op=new Racionales();
-        Racional r=(Racional)op.cociente(rr0,rr1);
-        this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
-        this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        if(op.validador(rr0,rr1)==false){
+            label1.setText("La división entre cero no está definida");
+        }else{
+            label1.setText("");
+            Racional r=(Racional)op.cociente(rr0,rr1);
+            this.txtNumeroTres.setText(String.valueOf(r.getNumerador()));
+            this.txtDenominadoTres.setText(String.valueOf(r.getDenominador()));
+        }
+
         this.label.setText("/");
     }
 

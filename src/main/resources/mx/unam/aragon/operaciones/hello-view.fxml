@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.unam.aragon.operaciones.controller.HelloController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.unam.aragon.operaciones.controller.HelloController">
    <children>
       <Label layoutX="117.0" layoutY="31.0" text="Operaciones Racionales">
          <font>
@@ -29,5 +29,6 @@
       <Button fx:id="btnProducto" layoutX="82.0" layoutY="250.0" mnemonicParsing="false" onAction="#producto" stylesheets="@css/bootstrapfx.css" text="*" />
       <Button fx:id="btnCociente" layoutX="281.0" layoutY="250.0" mnemonicParsing="false" onAction="#cociente" stylesheets="@css/bootstrapfx.css" text="/" />
       <Label layoutX="111.0" layoutY="166.0" text="Selecciona la operación a realizar" />
+      <Label fx:id="label1" layoutX="47.0" layoutY="287.0" prefHeight="18.0" prefWidth="345.0" textFill="RED" />
    </children>
 </Pane>

@@ -46,5 +46,12 @@ public class Racionales implements Operaciones{
         r3.setDenominador(r1.getDenominador()*r2.getNumerador());
         return r3;
     }
+    public boolean validador(Racional r1, Racional r2) {
+        if (r1.getDenominador()==0||r2.getDenominador()==0){
+            return false;
+        }else{
+            return true;
+        }
+    }
 
 }
